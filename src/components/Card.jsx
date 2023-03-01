@@ -76,7 +76,7 @@ function Card() {
   }, [selectedModel]);
 
   return (
-    <div className="card-body w-full h-full py-5 px-0 rounded-3xl flex flex-col justify-between">
+    <div className="card-body w-full h-full py-5 px-0 rounded-3xl flex flex-col justify-between text-white">
       <div className="card-top text-center">
         <h1 className="lg:text-6xl text-5xl font-semibold">Tabela Fipe</h1>
         <h2 className="lg:text-xl text-base lg:mt-4 mt-2 font-medium">Carros, Motos e Caminhões</h2>
@@ -93,7 +93,7 @@ function Card() {
         <div className="invisible"></div>
       )}
 
-      <div className="card-bottom absolute lg:bottom-10 bottom-5 left-[50%] -translate-x-[50%] flex flex-col items-center lg:gap-8 gap-4 w-[90%]">
+      <div className="card-bottom absolute lg:bottom-10 bottom-5 left-[50%] -translate-x-[50%] flex flex-col items-center lg:gap-8 gap-4 w-[90%] text-white">
         <h3 className="text-center lg:text-2xl text-sm font-medium">
           Saiba quanto vale seu veículo novo, seminovo ou usado na Tabela FIPE
         </h3>
@@ -101,7 +101,7 @@ function Card() {
         <div className="inputs flex flex-col lg:flex-row justify-center items-center w-full lg:gap-5 gap-2">
           <select
             required
-            className="select lg:w-[210px] w-full"
+            className={`select bg-[#2A303C] lg:w-[210px] ${brandStatus?"select-success":""} w-full hover:scale-105 transition-all duration-300`}
             defaultValue=""
             onChange={(e) => {
               setSelectedType(e.target.value);
@@ -121,7 +121,7 @@ function Card() {
           </select>
 
           <select
-            className="select lg:w-[210px] w-full"
+            className={`select bg-[#2A303C] lg:w-[210px] ${modelStatus?"select-success":""} w-full hover:enabled:scale-105 transition-all duration-300`}
             defaultValue=""
             disabled={!brandStatus}
             onChange={(e) => {
@@ -140,7 +140,7 @@ function Card() {
           </select>
 
           <select
-            className="select lg:w-[330px] w-full"
+            className={`select bg-[#2A303C] lg:w-[330px] ${yearStatus?"select-success":""} w-full hover:enabled:scale-105 transition-all duration-300`}
             defaultValue=""
             disabled={!modelStatus}
             onChange={(e) => {
@@ -161,7 +161,7 @@ function Card() {
           </select>
 
           <select
-            className="select lg:w-[180px] w-full"
+            className="select bg-[#2A303C] lg:w-[180px] w-full hover:enabled:scale-105 transition-all duration-300 "
             defaultValue=""
             disabled={!yearStatus}
             onChange={(e) => {
@@ -185,7 +185,7 @@ function Card() {
           className={
             !loading
               ? "btn lg:btn-wide btn-block self-center text-white bg-green-600 border-transparent"
-              : "btn lg:btn-wide self-center text-white bg-green-900 border-transparent loading"
+              : "btn lg:btn-wide btn-block self-center text-white bg-green-900 border-transparent loading"
           }
           disabled={!selectedBrand || !selectedModel || !selectedYear}
           onClick={getCalculation}
