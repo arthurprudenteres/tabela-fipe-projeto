@@ -84,10 +84,10 @@ function Card() {
 
       {calculation ? (
         <div className={"flex flex-col bg-white lg:p-5 p-4 lg:w-[60%] w-full h-full lg:mt-4 rounded-xl text-purple-700 self-center lg:gap-5 gap-4"}>
-          <p className="text-xl font-semibold text-center">{calculation.model}</p>
+          <p className="lg:text-xl text-lg font-semibold text-center">{calculation.model}</p>
           <p className="lg:text-xl text-base lg:mt-3">Código tabela FIPE: {calculation.codeFipe}</p>
           <h4 className="lg:text-4xl text-xl font-semibold">Preço médio:</h4><span className="lg:text-7xl text-3xl font-bold -mt-5">{calculation.price}</span>
-          <p className="lg:mt-2">Atualizado em: {calculation.referenceMonth}</p>
+          <p className="lg:mt-2 text-xs">Atualizado em: {calculation.referenceMonth}</p>
         </div>
       ) : (
         <div className="invisible"></div>
