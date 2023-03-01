@@ -76,32 +76,32 @@ function Card() {
   }, [selectedModel]);
 
   return (
-    <div className="card-body w-full h-[95%] p-10 rounded-3xl flex flex-col justify-between">
+    <div className="card-body w-full h-full lg:p-10 p-5 rounded-3xl flex flex-col flex-grow justify-between">
       <div className="card-top text-center">
         <h1 className="text-6xl font-semibold">Tabela Fipe</h1>
         <h2 className="text-xl mt-4 font-medium">Carros, Motos e Caminhões</h2>
       </div>
 
       {calculation ? (
-        <div className={"flex flex-col bg-white p-5 w-[50%] h-full mt-4 rounded-xl text-purple-700 self-center"}>
+        <div className={"flex flex-col bg-white p-5 lg:w-[60%] w-full h-full mt-4 rounded-xl text-purple-700 self-center lg:gap-5 gap-2"}>
           <p className="text-xl font-semibold text-center">{calculation.model}</p>
-          <p className="text-xl mt-2">Código tabela FIPE: {calculation.codeFipe}</p>
-          <h4 className="text-4xl font-semibold">Preço médio:</h4> <span className="text-7xl font-bold">{calculation.price}</span>
+          <p className="lg:text-xl text-base lg:mt-3">Código tabela FIPE: {calculation.codeFipe}</p>
+          <h4 className="lg:text-4xl text-xl font-semibold">Preço médio:</h4><span className="lg:text-7xl text-5xl font-bold -mt-4">{calculation.price}</span>
           <p className="mt-2">Atualizado em: {calculation.referenceMonth}</p>
         </div>
       ) : (
         <div className="invisible"></div>
       )}
 
-      <div className="card-bottom mt-20 flex flex-col justify-between gap-8">
-        <h3 className="text-center text-2xl font-medium">
+      <div className="card-bottom lg:mt-20 mt-10 flex flex-col justify-between gap-8">
+        <h3 className="text-center lg:text-2xl text-xl font-medium">
           Saiba quanto vale seu veículo novo, seminovo ou usado na Tabela FIPE
         </h3>
 
-        <div className="inputs flex justify-center items-center gap-5 w-full">
+        <div className="inputs flex flex-col lg:flex-row justify-center items-center w-full lg:gap-5 gap-2">
           <select
             required
-            className="select w-[210px]"
+            className="select lg:w-[210px] w-full"
             defaultValue=""
             onChange={(e) => {
               setSelectedType(e.target.value);
@@ -121,7 +121,7 @@ function Card() {
           </select>
 
           <select
-            className="select w-[210px]"
+            className="select lg:w-[210px] w-full"
             defaultValue=""
             disabled={!brandStatus}
             onChange={(e) => {
@@ -140,7 +140,7 @@ function Card() {
           </select>
 
           <select
-            className="select w-[330px]"
+            className="select lg:w-[330px] w-full"
             defaultValue=""
             disabled={!modelStatus}
             onChange={(e) => {
@@ -161,7 +161,7 @@ function Card() {
           </select>
 
           <select
-            className="select w-[180px]"
+            className="select lg:w-[180px] w-full"
             defaultValue=""
             disabled={!yearStatus}
             onChange={(e) => {
@@ -184,8 +184,8 @@ function Card() {
         <button
           className={
             !loading
-              ? "btn btn-wide self-center text-white bg-green-600 border-transparent"
-              : "btn btn-wide self-center text-white bg-green-900 border-transparent loading"
+              ? "btn lg:btn-wide btn-block self-center text-white bg-green-600 border-transparent"
+              : "btn lg:btn-wide self-center text-white bg-green-900 border-transparent loading"
           }
           disabled={!selectedBrand || !selectedModel || !selectedYear}
           onClick={getCalculation}
