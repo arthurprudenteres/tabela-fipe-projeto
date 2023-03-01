@@ -76,7 +76,7 @@ function Card() {
   }, [selectedModel]);
 
   return (
-    <div className="card-body w-full h-full lg:p-10 p-5 rounded-3xl flex flex-col flex-grow justify-between">
+    <div className="card-body w-full h-full p-5 rounded-3xl flex flex-col flex-grow justify-between">
       <div className="card-top text-center">
         <h1 className="text-6xl font-semibold">Tabela Fipe</h1>
         <h2 className="text-xl mt-4 font-medium">Carros, Motos e Caminhões</h2>
