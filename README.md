@@ -7,11 +7,15 @@ Projeto para buscar e mostrar para o usuário o preço médio de um veículo, ba
 
 - [@arthurprudenteres](https://github.com/arthurprudenteres/)
 
+## API Usada
+
+- [deividfortuna](https://deividfortuna.github.io/fipe/v2/)
 
 ## Screenshots
 
-![Versão Desktop](https://i.snipboard.io/Jlowf4.jpg)
+![Versão Desktop](https://i.snipboard.io/5InHmw.jpg)
 
+![Versão Mobile](https://i.snipboard.io/7YEuP9.jpg)
 
 ## Demonstração
 
