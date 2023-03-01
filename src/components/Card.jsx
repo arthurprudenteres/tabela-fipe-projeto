@@ -93,7 +93,7 @@ function Card() {
         <div className="invisible"></div>
       )}
 
-      <div className="card-bottom absolute bottom-10 left-[50%] -translate-x-[50%] flex flex-col items-center lg:gap-8 gap-5 w-[90%]">
+      <div className="card-bottom absolute lg:bottom-10 bottom-5 left-[50%] -translate-x-[50%] flex flex-col items-center lg:gap-8 gap-4 w-[90%]">
         <h3 className="text-center lg:text-2xl text-sm font-medium">
           Saiba quanto vale seu veículo novo, seminovo ou usado na Tabela FIPE
         </h3>
