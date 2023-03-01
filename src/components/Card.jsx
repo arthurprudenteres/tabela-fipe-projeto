@@ -79,14 +79,27 @@ function Card() {
     <div className="card-body w-full h-full py-5 px-0 rounded-3xl flex flex-col justify-between text-white">
       <div className="card-top text-center">
         <h1 className="lg:text-6xl text-5xl font-semibold">Tabela Fipe</h1>
-        <h2 className="lg:text-xl text-base lg:mt-4 mt-2 font-medium">Carros, Motos e Caminhões</h2>
+        <h2 className="lg:text-xl text-base lg:mt-4 mt-2 font-medium">
+          Carros, Motos e Caminhões
+        </h2>
       </div>
 
       {calculation ? (
-        <div className={"flex flex-col bg-white p-5 lg:w-[60%] w-full h-full mt-4 rounded-xl text-purple-700 self-center lg:gap-5 gap-4"}>
-          <p className="text-xl font-semibold text-center">{calculation.model}</p>
-          <p className="lg:text-xl text-base lg:mt-3">Código tabela FIPE: {calculation.codeFipe}</p>
-          <h4 className="lg:text-4xl text-xl font-semibold">Preço médio:</h4><span className="lg:text-7xl text-3xl font-bold -mt-5">{calculation.price}</span>
+        <div
+          className={
+            "flex flex-col bg-white p-5 lg:w-[60%] w-full h-full mt-4 rounded-xl text-purple-700 self-center lg:gap-5 gap-4"
+          }
+        >
+          <p className="text-xl font-semibold text-center">
+            {calculation.model}
+          </p>
+          <p className="lg:text-xl text-base lg:mt-3">
+            Código tabela FIPE: {calculation.codeFipe}
+          </p>
+          <h4 className="lg:text-4xl text-xl font-semibold">Preço médio:</h4>
+          <span className="lg:text-7xl text-3xl font-bold -mt-5">
+            {calculation.price}
+          </span>
           <p className="lg:mt-2">Atualizado em: {calculation.referenceMonth}</p>
         </div>
       ) : (
@@ -101,7 +114,9 @@ function Card() {
         <div className="inputs flex flex-col lg:flex-row justify-center items-center w-full lg:gap-5 gap-2">
           <select
             required
-            className={`select bg-[#2A303C] lg:w-[210px] ${brandStatus?"select-success":""} w-full hover:scale-105 transition-all duration-300`}
+            className={`select bg-[#2A303C] lg:w-[210px] ${
+              brandStatus ? "select-success" : ""
+            } w-full hover:scale-105 transition-all duration-300`}
             defaultValue=""
             onChange={(e) => {
               setSelectedType(e.target.value);
@@ -121,7 +136,9 @@ function Card() {
           </select>
 
           <select
-            className={`select bg-[#2A303C] lg:w-[210px] ${modelStatus?"select-success":""} w-full hover:enabled:scale-105 transition-all duration-300`}
+            className={`select bg-[#2A303C] lg:w-[210px] ${
+              modelStatus ? "select-success" : ""
+            } w-full hover:enabled:scale-105 transition-all duration-300`}
             defaultValue=""
             disabled={!brandStatus}
             onChange={(e) => {
@@ -140,7 +157,9 @@ function Card() {
           </select>
 
           <select
-            className={`select bg-[#2A303C] lg:w-[330px] ${yearStatus?"select-success":""} w-full hover:enabled:scale-105 transition-all duration-300`}
+            className={`select bg-[#2A303C] lg:w-[330px] ${
+              yearStatus ? "select-success" : ""
+            } w-full hover:enabled:scale-105 transition-all duration-300`}
             defaultValue=""
             disabled={!modelStatus}
             onChange={(e) => {
@@ -161,7 +180,9 @@ function Card() {
           </select>
 
           <select
-            className="select bg-[#2A303C] lg:w-[180px] w-full hover:enabled:scale-105 transition-all duration-300 "
+            className={`select bg-[#2A303C] lg:w-[180px] ${
+              selectedYear ? "select-success" : ""
+            } w-full hover:enabled:scale-105 transition-all duration-300`}
             defaultValue=""
             disabled={!yearStatus}
             onChange={(e) => {
