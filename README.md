@@ -1,32 +1,49 @@
-<h1 align="center">Welcome to Tabela Fipe 👋</h1>
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.5.0-blue.svg?cacheSeconds=2592000" />
-  <a href="#" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
-  </a>
-</p>
+# Projeto - Tabela Fipe
 
-> Projeto para buscar e mostrar para o usuário o preço médio de um veículo, baseado na tabela Fipe.
+Projeto para buscar e mostrar para o usuário o preço médio de um veículo, baseado na tabela Fipe.
 
-### ✨ [Demo](https://tabela-fipe-projeto.vercel.ap)
 
-## Install
+## Autor
 
-```sh
-npm install
-```
+- [@arthurprudenteres](https://github.com/arthurprudenteres/)
 
-## Author
 
-👤 **Arthur Prudente Resende**
+## Screenshots
 
-* Website: https://www.arthurpr.tech/
-* Github: [@arthurprudenteres](https://github.com/arthurprudenteres)
-* LinkedIn: [@arthur-prudente-284932242](https://linkedin.com/in/arthur-prudente-284932242)
+![Versão Desktop](https://i.snipboard.io/Jlowf4.jpg)
 
-## Show your support
 
-Give a ⭐️ if this project helped you!
+## Demonstração
 
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+https://tabela-fipe-projeto.vercel.app/
+
+## Funcionalidades
+
+- Buscar tipos de veículos
+- Buscar marcas de veículos
+- Buscar modelos de veículos
+- Obter preço médio da tabela Fipe baseado nessas informações
+- Responsivo
+
+
+## Stack utilizada
+
+**Front-end:** React, Vite, TailwindCSS, daisyUI
+
+
+## Aprendizados
+
+O foco foi entender melhor os hooks useState e useEffect do React, além da pratica com o consumo de API.
+
+
+## Roadmap
+
+- Melhorar a UI/UX da aplicação
+
+- Adicionar mais integrações e informações como histórico de preços
+
+
+## Licença
+
+[MIT](https://choosealicense.com/licenses/mit/#)
+
