@@ -76,25 +76,25 @@ function Card() {
   }, [selectedModel]);
 
   return (
-    <div className="card-body w-full h-full p-5 rounded-3xl flex flex-col flex-grow justify-between">
+    <div className="card-body w-full h-full py-5 px-0 rounded-3xl flex flex-col justify-between">
       <div className="card-top text-center">
-        <h1 className="text-6xl font-semibold">Tabela Fipe</h1>
-        <h2 className="text-xl mt-4 font-medium">Carros, Motos e Caminhões</h2>
+        <h1 className="lg:text-6xl text-5xl font-semibold">Tabela Fipe</h1>
+        <h2 className="lg:text-xl text-base lg:mt-4 mt-2 font-medium">Carros, Motos e Caminhões</h2>
       </div>
 
       {calculation ? (
-        <div className={"flex flex-col bg-white p-5 lg:w-[60%] w-full h-full mt-4 rounded-xl text-purple-700 self-center lg:gap-5 gap-2"}>
+        <div className={"flex flex-col bg-white p-5 lg:w-[60%] w-full h-full mt-4 rounded-xl text-purple-700 self-center lg:gap-5 gap-4"}>
           <p className="text-xl font-semibold text-center">{calculation.model}</p>
           <p className="lg:text-xl text-base lg:mt-3">Código tabela FIPE: {calculation.codeFipe}</p>
-          <h4 className="lg:text-4xl text-xl font-semibold">Preço médio:</h4><span className="lg:text-7xl text-5xl font-bold -mt-4">{calculation.price}</span>
-          <p className="mt-2">Atualizado em: {calculation.referenceMonth}</p>
+          <h4 className="lg:text-4xl text-xl font-semibold">Preço médio:</h4><span className="lg:text-7xl text-3xl font-bold -mt-5">{calculation.price}</span>
+          <p className="lg:mt-2">Atualizado em: {calculation.referenceMonth}</p>
         </div>
       ) : (
         <div className="invisible"></div>
       )}
 
-      <div className="card-bottom lg:mt-20 mt-10 flex flex-col justify-between gap-8">
-        <h3 className="text-center lg:text-2xl text-xl font-medium">
+      <div className="card-bottom absolute bottom-10 left-[50%] -translate-x-[50%] flex flex-col items-center lg:gap-8 gap-5 w-[90%]">
+        <h3 className="text-center lg:text-2xl text-sm font-medium">
           Saiba quanto vale seu veículo novo, seminovo ou usado na Tabela FIPE
         </h3>
 
